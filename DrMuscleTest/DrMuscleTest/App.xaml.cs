@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrMuscleTest.Views.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace DrMuscleTest
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LandingPage();
         }
 
         protected override void OnStart()

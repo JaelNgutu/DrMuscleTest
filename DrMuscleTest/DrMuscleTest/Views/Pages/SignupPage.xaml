@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DrMuscleTest.Views.Pages.SignupPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:DrMuscleTest.Controls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    BackgroundColor="Black"
+                    HeightRequest="180">
+                    <pancakeView:PancakeView
+                        CornerRadius="3"
+                        HorizontalOptions="Center"
+                        WidthRequest="200">
+                        <Image
+                            Aspect="AspectFit"
+                            HeightRequest="70"
+                            Source="logo1" />
+
+                    </pancakeView:PancakeView>
+                </Grid>
+                <Grid
+                    Grid.Row="1"
+                    Margin="10,0,10,0"
+                    Padding="15"
+                    BackgroundColor="White">
+                    <StackLayout Spacing="30">
+                        <StackLayout>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                HorizontalOptions="Center"
+                                Text="JOIN FREE"
+                                TextColor="Black" />
+                            <Label
+                                FontSize="Default"
+                                HorizontalOptions="Center"
+                                Text="Save your workouts, progress, and stats"
+                                TextColor="Black" />
+                        </StackLayout>
+
+                        <StackLayout Spacing="20" Padding="15">
+                            <custom:CustomEntry
+                                CornerRadius="10"
+                                FontSize="16"
+                                HeightRequest="45"
+                                HorizontalTextAlignment="Center"
+                                IsCurvedCornersEnabled="True"
+                                Placeholder="Email"
+                                PlaceholderColor="Gray"
+                                TextColor="Black" />
+                            <custom:CustomEntry
+                                CornerRadius="10"
+                                FontSize="17"
+                                HeightRequest="45"
+                                HorizontalTextAlignment="Center"
+                                IsCurvedCornersEnabled="True"
+                                IsPassword="True"
+                                Placeholder="Password"
+                                PlaceholderColor="Gray"
+                                TextColor="Black" />
+                            <custom:CustomEntry
+                                CornerRadius="10"
+                                FontSize="17"
+                                HeightRequest="45"
+                                HorizontalTextAlignment="Center"
+                                IsCurvedCornersEnabled="True"
+                                IsPassword="True"
+                                Placeholder="Confirm Password"
+                                PlaceholderColor="Gray"
+                                TextColor="Black" />
+
+                            <pancakeView:PancakeView
+                                Padding="15,10,15,10"
+                                touch:TouchEff.PressedAnimationDuration="300"
+                                touch:TouchEff.PressedOpacity="0.6"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="300"
+                                BackgroundColor="#042e47"
+                                CornerRadius="15"
+                                HorizontalOptions="Center"
+                                WidthRequest="300">
+                                <pancakeView:PancakeView.Shadow>
+                                    <pancakeView:DropShadow Offset="10,10" Color="#000000" />
+                                </pancakeView:PancakeView.Shadow>
+                                <Label
+                                    FontSize="16"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Sign Up"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                            </pancakeView:PancakeView>
+                            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Text="By clicking Sign Up,you agree to our terms"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    HorizontalOptions="Start"
+                                    Text=" and that you have read our privacy policy"
+                                    VerticalOptions="Center" />
+                            </StackLayout>
+
+                            <BoxView HeightRequest="1" Color="LightGray" />
+                            <Label
+                                FontSize="Default"
+                                HorizontalOptions="Center"
+                                Text="Or sign up via Facebook , Google or Apple" />
+                            <Grid ColumnSpacing="15" HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <pancakeView:PancakeView
+                                    Grid.Column="0"
+                                    Padding="10,5,10,5"
+                                    touch:TouchEff.PressedAnimationDuration="300"
+                                    touch:TouchEff.PressedOpacity="0.6"
+                                    touch:TouchEff.PressedScale="0.9"
+                                    touch:TouchEff.RegularAnimationDuration="300"
+                                    BackgroundColor="#1877f2"
+                                    CornerRadius="20"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="60">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="20"
+                                        Source="facebook" />
+                                    <pancakeView:PancakeView.Shadow>
+                                        <pancakeView:DropShadow Offset="10,10" Color="#000000" />
+                                    </pancakeView:PancakeView.Shadow>
+                                </pancakeView:PancakeView>
+                                <pancakeView:PancakeView
+                                    Grid.Column="1"
+                                    Padding="10,5,10,5"
+                                    touch:TouchEff.PressedAnimationDuration="300"
+                                    touch:TouchEff.PressedOpacity="0.6"
+                                    touch:TouchEff.PressedScale="0.9"
+                                    touch:TouchEff.RegularAnimationDuration="300"
+                                    BackgroundColor="White"
+                                    CornerRadius="20"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="60">
+                                    <pancakeView:PancakeView.Shadow>
+                                        <pancakeView:DropShadow Offset="10,10" Color="#000000" />
+                                    </pancakeView:PancakeView.Shadow>
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="20"
+                                        Source="googlesocial" />
+                                </pancakeView:PancakeView>
+                                <pancakeView:PancakeView
+                                    Grid.Column="2"
+                                    Padding="10,5,10,5"
+                                    touch:TouchEff.PressedAnimationDuration="300"
+                                    touch:TouchEff.PressedOpacity="0.6"
+                                    touch:TouchEff.PressedScale="0.9"
+                                    touch:TouchEff.RegularAnimationDuration="300"
+                                    BackgroundColor="Black"
+                                    CornerRadius="20"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="60">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="20"
+                                        Source="apple" />
+                                    <pancakeView:PancakeView.Shadow>
+                                        <pancakeView:DropShadow Offset="10,10" Color="#000000" />
+                                    </pancakeView:PancakeView.Shadow>
+                                </pancakeView:PancakeView>
+                            </Grid>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

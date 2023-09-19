@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DrMuscleTest.Views.Pages.LandingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+    BindingContext="{Binding LandingViewModel, Source={StaticResource Locator}}">
+
+    <ContentPage.Content>
+
+        <Grid>
+
+
+            <CarouselView
+                x:Name="carouselView"
+                ItemsSource="{Binding CarouselImages}"
+                Position="{Binding CarouselPosition, Mode=TwoWay}"
+                IndicatorView="indicatorView"
+                VerticalOptions="FillAndExpand">
+
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid VerticalOptions="FillAndExpand">
+                            <Image Aspect="AspectFill" Source="{Binding ImageSource}" />
+
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+
+            </CarouselView>
+           
+                <StackLayout VerticalOptions="Start">
+                    <pancakeView:PancakeView
+                        CornerRadius="3"
+                        HorizontalOptions="Center"
+                        WidthRequest="200">
+                        <Image
+                            Aspect="AspectFit"
+                            HeightRequest="200"
+                            Source="{Binding Logo}" />
+
+                    </pancakeView:PancakeView>
+                </StackLayout>
+                <StackLayout Spacing="10" Margin="20" VerticalOptions="End">
+                <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+                <pancakeView:PancakeView
+                        Padding="15,10,15,10"
+                        touch:TouchEff.PressedAnimationDuration="300"
+                        touch:TouchEff.PressedOpacity="0.6"
+                        touch:TouchEff.PressedScale="0.9"
+                        touch:TouchEff.RegularAnimationDuration="300"
+                    touch:TouchEff.Command="{Binding SignUpCommand}"
+                        BackgroundColor="#042e47"
+                        CornerRadius="10"
+                        HorizontalOptions="Center">
+
+                        <Label
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            Text="CREATE ACCOUNT"
+                            TextColor="White"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="500" />
+
+                    </pancakeView:PancakeView>
+
+                    <pancakeView:PancakeView
+                        Padding="15,10,15,10"
+                        touch:TouchEff.PressedAnimationDuration="300"
+                        touch:TouchEff.PressedOpacity="0.6"
+                        touch:TouchEff.PressedScale="0.9"
+                        touch:TouchEff.RegularAnimationDuration="300"
+                        BackgroundColor="White"
+                        CornerRadius="10"
+                        HorizontalOptions="Center">
+                        <Label
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            Text="LOGIN"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="500" />
+                    </pancakeView:PancakeView>
+                </StackLayout>
+           
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
